@@ -1,0 +1,125 @@
+.footer {
+    /* background-color: #FFF5F5; */
+    background-color:#FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+    color: #2D3748;
+    margin-bottom: 10px;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .footer-socials div a{
+    width: 40px;
+    height: 40px;
+    background-color: #FDF5F3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+      border-radius: 50%;
+   
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-links a {
+    color: #4A5568;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #A0522D;
+  }
+  
+  .divider {
+    color: #CBD5E0;
+  }
+  
+  .footer-credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #4A5568;
+    font-size: 0.9rem;
+  }
+  
+  .heart-icon {
+    color: #E53E3E;
+    animation: heartbeat 1.5s ease infinite;
+  }
+  
+  .copyright {
+    color: #718096;
+    font-size: 0.8rem;
+  }
+  
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 30px 15px;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .divider {
+      display: none;
+    }
+  
+    .tagline {
+      font-size: 1rem;
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (forced-colors: active) {
+    .footer-links a {
+      color: LinkText;
+    }
+  
+    .footer-links a:hover {
+      color: ActiveText;
+    }
+  }
