@@ -1,0 +1,261 @@
+.artisan-verification {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #FFF5F5;
+  }
+  
+  .verification-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .verification-form h1 {
+    font-size: 2rem;
+    color: #2D3748;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .verification-form > p {
+    text-align: center;
+    color: #718096;
+    margin-bottom: 40px;
+  }
+  
+  .form-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #FFF5F5;
+    border-radius: 8px;
+  }
+  
+  .form-section h3 {
+    font-size: 1.2rem;
+    color: #2D3748;
+    margin-bottom: 5px;
+  }
+  
+  .form-section p {
+    color: #718096;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .upload-box {
+    border: 2px dashed #E2E8F0;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .upload-box:hover {
+    border-color: #A0522D;
+  }
+  
+  .upload-box svg {
+    color: #A0522D;
+    margin-bottom: 10px;
+  }
+  
+  .upload-box span {
+    display: block;
+    color: #4A5568;
+  }
+  
+  .upload-box input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .input-with-icon {
+    position: relative;
+  }
+  
+  .input-with-icon svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #718096;
+  }
+  
+  .input-with-icon input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    min-height: 100px;
+    resize: vertical;
+    font-size: 0.95rem;
+  }
+  
+  .input-with-icon input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #A0522D;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .save-progress-btn,
+  .submit-btn {
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+  }
+  
+  .save-progress-btn {
+    background-color: white;
+    border: 1px solid #A0522D;
+    color: #A0522D;
+  }
+  
+  .submit-btn {
+    background-color: #A0522D;
+    border: none;
+    color: white;
+  }
+  
+  .save-progress-btn:hover {
+    background-color: #FDF5F3;
+  }
+  
+  .submit-btn:hover {
+    background-color: #8B4513;
+  }
+  
+  .payment-methods {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #E2E8F0;
+  }
+  
+  .payment-methods img {
+    height: 30px;
+    opacity: 0.6;
+  }
+  
+  /* Under Review Styles */
+  .under-review {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .review-icon {
+    color: #A0522D;
+    margin-bottom: 20px;
+  }
+  
+  .under-review h2 {
+    font-size: 1.8rem;
+    color: #2D3748;
+    margin-bottom: 10px;
+  }
+  
+  .under-review p {
+    color: #718096;
+    margin-bottom: 30px;
+  }
+  
+  .review-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .back-btn,
+  .status-btn {
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .back-btn {
+    background-color: white;
+    border: 1px solid #A0522D;
+    color: #A0522D;
+  }
+  
+  .status-btn {
+    background-color: #A0522D;
+    border: none;
+    color: white;
+  }
+  
+  .back-btn:hover {
+    background-color: #FDF5F3;
+  }
+  
+  .status-btn:hover {
+    background-color: #8B4513;
+  }
+  
+  @media (max-width: 768px) {
+    .verification-container {
+      padding: 20px;
+    }
+  
+    .verification-form h1 {
+      font-size: 1.75rem;
+    }
+  
+    .form-actions {
+      flex-direction: column;
+    }
+  
+    .payment-methods {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .verification-container {
+      padding: 15px;
+    }
+  
+    .form-section {
+      padding: 15px;
+    }
+  
+    .review-actions {
+      flex-direction: column;
+    }
+  }
