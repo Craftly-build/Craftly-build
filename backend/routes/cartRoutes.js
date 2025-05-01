@@ -1,3 +1,4 @@
+// This file is for shopping cart logic and function , for the add , delete , remove ,edit 
 
 const express = require("express");
 const router = express.Router();

@@ -6,6 +6,7 @@ const cors = require("cors"); // This because we are connecting React (Frontend)
 const connectDB = require('./config/db');
 const CartRoutes = require('./routes/cartRoutes'); // this imports the routes
 const ProductRoutes = require('./routes/productRoutes');
+const CategoryRoutes = require('./routes/categoryRoutes');
 
 //variable for express function
 const app = express();
@@ -32,6 +33,7 @@ app.use(session({ // This helps t manage the sessiosn like carts,users, login et
 
 app.use('/api', CartRoutes); // This shows all cart routes will have to get the prefix with /api
 app.use('/api', ProductRoutes); // This shows all product routes 
+app.use('/api', CategoryRoutes); // This shows all cartegories.
 
 
 

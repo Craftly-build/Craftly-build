@@ -27,7 +27,9 @@ const productSchema = new mongoose.Schema(
     },
     images: 
       {
-        type: String, // store image path like "/images/product1.jpg"
+        type: [String],// store image path like "/images/product1.jpg"
+        required: true
+         
       },
     
     featured: {
