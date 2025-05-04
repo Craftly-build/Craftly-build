@@ -9,7 +9,7 @@
 
 .auth-container {
   display: flex;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   width: 100%;
   background-color: rgb(255, 255, 255);
   border-radius: 12px;

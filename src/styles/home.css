@@ -6,7 +6,7 @@
 
 
 .containerr {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -140,7 +140,10 @@
 }
 @media (max-width: 768px) {
   .creators-grid {
+    width: 85%;
     grid-template-columns: 1fr;
+    place-content: center;
+    margin-inline: auto;
   }
 
   .creator-card {
@@ -150,11 +153,13 @@
   }
 
   .creator-image {
-    width: 100px;
+    width: 150px;
     height: 100px;
     margin: 0 auto;
   }
-
+ .creator-info {
+  padding-top: 70px;
+ }
   .rating {
     justify-content: center;
   }

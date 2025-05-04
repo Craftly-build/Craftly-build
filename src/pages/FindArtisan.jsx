@@ -4,15 +4,15 @@ import { useState } from "react"
 import { Star, BookmarkIcon, ChevronLeft, ChevronRight } from "lucide-react"
 import "../styles/FindArtisan.css"
 import Footer from "../components/Footer"
-import '../styles/TrendingProduct.css';
-import i3 from "../assets/a1.png";
-import i4 from "../assets/a2.png";
-import i5 from "../assets/a3.png";
-import i6 from "../assets/a4.png";
-import i7 from "../assets/b1.png";
-import i8 from "../assets/b2.png";
-import i9 from "../assets/b3.png";
-import i1 from "../assets/fc3.png";
+import "../styles/TrendingProduct.css"
+import i3 from "../assets/a1.png"
+import i4 from "../assets/a2.png"
+import i5 from "../assets/a3.png"
+import i6 from "../assets/a4.png"
+import i7 from "../assets/b1.png"
+import i8 from "../assets/b2.png"
+import i9 from "../assets/b3.png"
+import i1 from "../assets/fc3.png"
 
 const FindArtisanPage = () => {
   const [activeCategory, setActiveCategory] = useState("all")
@@ -35,10 +35,8 @@ const FindArtisanPage = () => {
       location: "Lagos, Nigeria",
       rating: 5.0,
       reviews: 24,
-      profileImage:i3,
-      gallery: [
-       i4,i5,i6,
-      ],
+      profileImage: i3,
+      gallery: [i4, i5, i6],
     },
     {
       id: 2,
@@ -48,9 +46,7 @@ const FindArtisanPage = () => {
       rating: 5.0,
       reviews: 16,
       profileImage: i7,
-      gallery: [
-        i8,i9,i1,
-      ],
+      gallery: [i8, i9, i1],
     },
     {
       id: 3,
@@ -60,9 +56,7 @@ const FindArtisanPage = () => {
       rating: 4.7,
       reviews: 18,
       profileImage: i7,
-      gallery: [
-        i8,i9,i1,
-      ],
+      gallery: [i8, i9, i1],
     },
     {
       id: 4,
@@ -72,9 +66,7 @@ const FindArtisanPage = () => {
       rating: 4.9,
       reviews: 32,
       profileImage: i7,
-      gallery: [
-        i8,i9,i1,
-      ],
+      gallery: [i8, i9, i1],
     },
     {
       id: 5,
@@ -84,9 +76,7 @@ const FindArtisanPage = () => {
       rating: 4.8,
       reviews: 50,
       profileImage: i7,
-      gallery: [
-        i8,i9,i1,
-      ],
+      gallery: [i8, i9, i1],
     },
     {
       id: 6,
@@ -96,9 +86,7 @@ const FindArtisanPage = () => {
       rating: 4.6,
       reviews: 50,
       profileImage: i7,
-      gallery: [
-        i8,i9,i1,
-      ],
+      gallery: [i8, i9, i1],
     },
     {
       id: 7,
@@ -108,9 +96,7 @@ const FindArtisanPage = () => {
       rating: 4.9,
       reviews: 23,
       profileImage: i7,
-      gallery: [
-        i8,i9,i1,
-      ],
+      gallery: [i8, i9, i1],
     },
     {
       id: 8,
@@ -120,9 +106,7 @@ const FindArtisanPage = () => {
       rating: 4.7,
       reviews: 21,
       profileImage: i7,
-      gallery: [
-        i8,i9,i1,
-      ],
+      gallery: [i8, i9, i1],
     },
   ]
 
@@ -238,7 +222,6 @@ const FindArtisanPage = () => {
         <button className="view-more-btn">View More Artisans</button>
       </div>
 
-      <Footer />
     </div>
   )
 }

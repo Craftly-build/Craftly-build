@@ -1,0 +1,77 @@
+.review-container {
+    text-align: center;
+
+}
+.review-container .stars-rating {
+    margin-left: 45%;
+
+}
+
+.review-header{
+    margin-top: 20px;
+}
+
+.review-header , h4 {
+  color: hsla(0, 0%, 0%, 1);
+}
+
+.total-reviews {
+    margin-top: -65px;
+    margin-left: 12%;
+    color: hsla(0, 0%, 43%, 1);
+
+}
+
+.review-card{
+        
+    margin-left: 25%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: hsla(0, 22%, 69%, 0.25);
+    box-shadow: 0 4px 4px 0px hsla(0, 0%, 0%, 0.25);
+    width: 600px;
+
+}
+
+.read-more {
+    display: flex;
+    font-weight: 600;
+    color: hsla(10, 41%, 45%, 1);
+    border: none;
+    outline: none;
+    margin-left: 16%;
+    background-color: hsla(0, 22%, 89%, 0.25);
+
+}
+
+
+.name-rating{
+    display: flex;
+    width: 50px;
+    margin-left: 30px;
+    padding-top: 20px;
+}
+
+.star span {
+    margin-right: 5px;
+  font-size: 30px;
+}
+
+.all-review-buttons {
+  margin-left: 60%;
+}
+.all-review-buttons button {
+    background-color: hsla(10, 41%, 45%, 1);
+    border: 0.5px solid hsla(10, 41%, 45%, 1);
+   color: white;
+    outline: none;
+    padding: 16px 92px 16px 92px;
+    border-radius: 10px;
+    font-weight: 500;
+    gap: 10px;
+    margin-bottom: 40px;
+    width: fit-content;
+}

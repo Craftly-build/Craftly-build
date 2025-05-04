@@ -1,0 +1,331 @@
+.contact-page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+  }
+  
+  .contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .contact-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  
+  .contact-header p {
+    font-size: 16px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .contact-method {
+    background-color: #fff;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 30px;
+  }
+  
+  .contact-method:last-child {
+    border-bottom: none;
+  }
+  
+  .method-icon {
+    display: none; /* Hide icons to match the image design */
+  }
+  
+  .contact-method h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .contact-method p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contact-method a {
+    color: #b25d48;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .contact-method a:hover {
+    text-decoration: underline;
+  }
+  
+  .response-time {
+    font-style: italic;
+    color: #777;
+    font-size: 14px !important;
+  }
+  
+  .coming-soon {
+    font-weight: 600;
+    color: #b25d48 !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .chat-button {
+    background-color: #b25d48;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chat-button:hover {
+    background-color: #a04e3a;
+  }
+  
+  /* Chat window */
+  .chat-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    height: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow: hidden;
+  }
+  
+  .chat-header {
+    background-color: #b25d48;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+  }
+  
+  .message {
+    margin-bottom: 15px;
+    max-width: 80%;
+  }
+  
+  .message p {
+    margin: 0 0 5px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .message .time {
+    font-size: 11px;
+    color: #999;
+  }
+  
+  .message.support {
+    margin-right: auto;
+  }
+  
+  .message.support p {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .message.user {
+    margin-left: auto;
+  }
+  
+  .message.user p {
+    background-color: #b25d48;
+    color: white;
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .chat-input button {
+    background-color: #b25d48;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Feedback form */
+  .feedback-form {
+    text-align: left;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .form-error {
+    color: #e53e3e;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .form-success {
+    color: #38a169;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .submit-button {
+    background-color: #b25d48;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .submit-button:hover {
+    background-color: #a04e3a;
+  }
+  
+  .contact-faq {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .contact-faq h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .contact-faq p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .contact-faq a {
+    color: #b25d48;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .contact-faq a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-methods {
+      gap: 20px;
+    }
+  
+    .chat-window {
+      width: 90%;
+      height: 70vh;
+      bottom: 10px;
+      right: 5%;
+      left: 5%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-header h1 {
+      font-size: 24px;
+    }
+  
+    .contact-method h2 {
+      font-size: 18px;
+    }
+  }
+  

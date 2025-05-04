@@ -60,7 +60,6 @@ const HomePage = () => {
       <TrendingProducts />
       <FeaturedArtisans artisans={featuredArtisan} />
       <CommunityStats />
-      <Footer />
     </div>
   )
 }

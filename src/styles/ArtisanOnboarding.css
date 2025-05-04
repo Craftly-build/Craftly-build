@@ -1,0 +1,212 @@
+.artisan-onboarding-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: #333;
+  }
+  
+  .onboarding-welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .onboarding-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .benefit-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .benefit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .benefit-card p {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .onboarding-steps {
+    margin-bottom: 3rem;
+  }
+  
+  .onboarding-steps h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .steps-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: step-counter;
+  }
+  
+  .steps-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f8b500;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+  }
+  
+  .step-content {
+    flex: 1;
+  }
+  
+  .step-content h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .step-content p {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .get-started-btn {
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  
+  .onboarding-signup {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .onboarding-signup h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .onboarding-signup p {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .signup-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .login-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .login-link {
+    color: #f8b500;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  
+  .seller-testimonials {
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .seller-testimonials h3 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .testimonial {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .testimonial p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial-author {
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+  }
+  
+  @media (max-width: 768px) {
+    .onboarding-welcome h1 {
+      font-size: 2rem;
+    }
+  
+    .benefit-card {
+      padding: 1.5rem;
+    }
+  
+    .steps-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .step-number {
+      margin-bottom: 1rem;
+    }
+  }
+  
