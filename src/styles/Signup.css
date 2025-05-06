@@ -170,7 +170,7 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: url('path-to-apple-icon.svg') no-repeat center;
+    /* background: url('path-to-apple-icon.svg') no-repeat center; */
     background-size: contain;
   }
   
