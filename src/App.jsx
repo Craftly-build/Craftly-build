@@ -5,7 +5,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google'; // ⬅️ Import Goog
 import ErrorBoundary from "./components/ErrorBoundary";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Navbar from "./components/Navbar";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 import HomePage from "./pages/Home";
 import ProductsPage from "./pages/ProductsPage";
 import CartPage from "./pages/Cart"; 
