@@ -1,14 +1,14 @@
-import axios from 'axios';
+import axios from "axios";
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: "https://craftlyng.com/login",
   withCredentials: true,
 });
 
 export const categoryService = {
   // Get all categories
   getCategories: async () => {
-    const response = await api.get('/categories');
+    const response = await api.get("/categories");
     return response.data;
   },
 
@@ -16,5 +16,5 @@ export const categoryService = {
   getProductsByCategory: async (categoryId) => {
     const response = await api.get(`/categories/${categoryId}/products`);
     return response.data;
-  }
+  },
 };
