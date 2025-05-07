@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://craftlyng.com/login",
+  baseURL: "https://craftlyng.com/api",
   withCredentials: true, // Required for sessions
 });
 
