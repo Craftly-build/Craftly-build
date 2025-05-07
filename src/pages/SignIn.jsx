@@ -124,7 +124,7 @@ const LoginPage = () => {
                 <input
                   type="email"
                   id="email"
-                  placeholder={t("auth.email")}
+                  placeholder='Email'
                   aria-invalid={errors.email ? "true" : "false"}
                   {...register("email", {
                     required: t("auth.requiredField"),
@@ -149,7 +149,7 @@ const LoginPage = () => {
                 <input
                   type="password"
                   id="password"
-                  placeholder={t("auth.password")}
+                  placeholder="Password"
                   aria-invalid={errors.password ? "true" : "false"}
                   {...register("password", {
                     required: t("auth.requiredField"),
@@ -171,23 +171,14 @@ const LoginPage = () => {
               </div>
 
               <div className="form-group checkbox-group">
-                <input
-                  type="checkbox"
-                  id="rememberMe"
-                  {...register("rememberMe")}
-                  onChange={(e) => {
-                    handleChange(e)
-                    register("rememberMe").onChange(e)
-                  }}
-                />
-                <label htmlFor="rememberMe">{t("auth.rememberMe")}</label>
+               
                 <div className="forgot-password">
-                  <Link to="/forgot-password">{t("auth.forgotPassword")}</Link>
+                  <Link to="/forgot-password">Forgot password?</Link>
                 </div>
               </div>
 
               <button type="submit" className="auth-btn" disabled={loading}>
-                {loading ? <LoadingSpinner size="small" /> : t("auth.login")}
+                {loading ? <LoadingSpinner size="small" /> : 'Sign up'}
               </button>
             </form>
 

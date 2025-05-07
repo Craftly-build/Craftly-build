@@ -166,7 +166,7 @@ const RegisterPage = () => {
               {errors.confirmPassword && <span className="error-message">{errors.confirmPassword.message}</span>}
             </div>
 
-            <div className="form-group checkbox-group">
+            <div className="form checkbox-container">
               <input
                 type="checkbox"
                 id="terms"
