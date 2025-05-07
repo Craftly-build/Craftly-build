@@ -1,36 +1,60 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useProducts } from "../context/ProductContext";
-import LazyImage from "./LazyImage";
-import "../styles/featuredCategories.css";
-import LoadingSpinner from "./Loading";
+import { Link } from "react-router-dom"
+import LazyImage from "./LazyImage"
+import "../styles/featuredCategories.css"
+import i3 from "../assets/fc1.png"
+import i4 from "../assets/fc2.png"
+import i5 from "../assets/fc3.png"
+import i6 from "../assets/fc4.png"
+import i7 from "../assets/fc5.png"
+
+const featuredCategories = [
+  {
+    id: 1,
+    name: "Clothing and Fashion",
+    image: i3,
+    link: "/categories/clothing-fashion",
+  },
+  {
+    id: 2,
+    name: "Jewelry & Accessories",
+    image: i4,
+    link: "/categories/jewelry-accessories",
+  },
+  {
+    id: 3,
+    name: "Bags & Leather Works",
+    image: i5,
+    link: "/categories/bags-leather",
+  },
+  {
+    id: 4,
+    name: "Beauty & Wellness",
+    image: i6,
+    link: "/categories/beauty-wellness",
+  },
+  {
+    id: 5,
+    name: "Home & Decor",
+    image: i7,
+    link: "/categories/home-decor",
+  },
+]
 
 const FeaturedCategories = () => {
-  const { categories, fetchCategories, loading } = useProducts();
-
-  useEffect(() => {
-    fetchCategories();
-  }, []);
-
   return (
     <section className="featured-categories-section">
       <div className="containerr">
         <h2 className="section-title">Featured Categories</h2>
         <div className="categories-grid">
-          {loading && <LoadingSpinner/>}
-          {!loading && categories.length === 0 && <p>No categories found.</p>}
-          {categories.map((category) => (
+          {featuredCategories.map((category) => (
             <Link
-              to={`/categories/${category.slug || category._id}`}
-              key={category._id}
+              to={category.link}
+              key={category.id}
               className="category-card"
               aria-label={`Browse ${category.name} category`}
             >
               <div className="category-image">
-                <LazyImage
-                  src={category.image || "/placeholder.svg"}
-                  alt={category.name}
-                />
+                <LazyImage src={category.image || "/placeholder.svg"} alt={category.name} />
               </div>
               <h3>{category.name}</h3>
             </Link>
@@ -38,7 +62,8 @@ const FeaturedCategories = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default FeaturedCategories;
+export default FeaturedCategories
+

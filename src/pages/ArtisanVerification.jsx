@@ -1,91 +1,90 @@
-"use client"
-
-import { useState, useRef } from "react"
-import { Upload, Check, File } from "lucide-react"
-import "../styles/ArtisanVerification.css"
-import PayLogos from "../components/PayLogos"
+import React, { useState, useRef } from "react";
+import { Upload, Check, File } from 'lucide-react';
+import "../styles/ArtisanVerification.css";
+import PayLogos from "../components/PayLogos";
+import Footer from "../components/Footer"
 
 const ArtisanVerification = () => {
-  const [currentPage, setCurrentPage] = useState("verification-form")
-  const [isVerified, setIsVerified] = useState(false)
-
+  const [currentPage, setCurrentPage] = useState("verification-form");
+  const [isVerified, setIsVerified] = useState(false);
+  
   // Form state
   const [personalDetails, setPersonalDetails] = useState({
     fullName: "",
     phone: "",
-    address: "",
-  })
-
+    address: ""
+  });
+  
   const [idUpload, setIdUpload] = useState({
     file: null,
     fileName: "",
-    uploaded: false,
-  })
-
+    uploaded: false
+  });
+  
   const [certUpload, setCertUpload] = useState({
     file: null,
     fileName: "",
-    uploaded: false,
-  })
-
+    uploaded: false
+  });
+  
   // Refs for file inputs
-  const idFileInputRef = useRef(null)
-  const certFileInputRef = useRef(null)
-
+  const idFileInputRef = useRef(null);
+  const certFileInputRef = useRef(null);
+  
   const handlePersonalDetailsChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setPersonalDetails({
       ...personalDetails,
-      [name]: value,
-    })
-  }
-
+      [name]: value
+    });
+  };
+  
   const handleIdUploadClick = () => {
     // Trigger the hidden file input
-    idFileInputRef.current.click()
-  }
-
+    idFileInputRef.current.click();
+  };
+  
   const handleCertUploadClick = () => {
     // Trigger the hidden file input
-    certFileInputRef.current.click()
-  }
-
+    certFileInputRef.current.click();
+  };
+  
   const handleIdFileChange = (e) => {
-    const file = e.target.files[0]
+    const file = e.target.files[0];
     if (file) {
       setIdUpload({
         file: file,
         fileName: file.name,
-        uploaded: true,
-      })
+        uploaded: true
+      });
     }
-  }
-
+  };
+  
   const handleCertFileChange = (e) => {
-    const file = e.target.files[0]
+    const file = e.target.files[0];
     if (file) {
       setCertUpload({
         file: file,
         fileName: file.name,
-        uploaded: true,
-      })
+        uploaded: true
+      });
     }
-  }
-
+  };
+  
   const handleSubmitVerification = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     // In a real app, we would upload the files to a server here
     // For now, we'll just move to the next page
-    setCurrentPage("verification-process")
-  }
-
+    setCurrentPage("verification-process");
+  };
+  
   const navigateToDashboard = () => {
-    setCurrentPage("dashboard")
-  }
-
+    setCurrentPage("dashboard");
+  };
+  
   const toggleVerificationStatus = () => {
-    setIsVerified(!isVerified)
-  }
+    setIsVerified(!isVerified);
+  };
 
   // Verification Form Page
   const VerificationForm = () => (
@@ -94,41 +93,41 @@ const ArtisanVerification = () => {
         <h2>Complete Your Verification</h2>
         <p>Fill out the form below to verify your account and start selling your products or services</p>
       </div>
-
+      
       <form onSubmit={handleSubmitVerification}>
         <div className="form-section personal-info">
           <h3>Personal Details</h3>
           <div className="form-group">
             <label htmlFor="fullName">Full Name</label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
+            <input 
+              type="text" 
+              id="fullName" 
+              name="fullName" 
               value={personalDetails.fullName}
               onChange={handlePersonalDetailsChange}
               placeholder="Enter your full name"
               required
             />
           </div>
-
+          
           <div className="form-group">
             <label htmlFor="phone">Phone Number</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
               value={personalDetails.phone}
               onChange={handlePersonalDetailsChange}
               placeholder="Enter your phone number"
               required
             />
           </div>
-
+          
           <div className="form-group">
             <label htmlFor="address">Address</label>
-            <textarea
-              id="address"
-              name="address"
+            <textarea 
+              id="address" 
+              name="address" 
               value={personalDetails.address}
               onChange={handlePersonalDetailsChange}
               placeholder="Enter your full address"
@@ -136,20 +135,23 @@ const ArtisanVerification = () => {
             ></textarea>
           </div>
         </div>
-
+        
         <div className="form-section id-upload">
           <h3>Upload Identification</h3>
           <div className="upload-container">
             {/* Hidden file input */}
-            <input
-              type="file"
-              ref={idFileInputRef}
-              onChange={handleIdFileChange}
+            <input 
+              type="file" 
+              ref={idFileInputRef} 
+              onChange={handleIdFileChange} 
               accept=".jpg,.jpeg,.png,.pdf"
-              style={{ display: "none" }}
+              style={{ display: 'none' }}
             />
-
-            <div className={`upload-box ${idUpload.uploaded ? "uploaded" : ""}`} onClick={handleIdUploadClick}>
+            
+            <div 
+              className={`upload-box ${idUpload.uploaded ? 'uploaded' : ''}`} 
+              onClick={handleIdUploadClick}
+            >
               {idUpload.uploaded ? (
                 <div className="upload-success">
                   <Check size={24} />
@@ -170,20 +172,23 @@ const ArtisanVerification = () => {
             </div>
           </div>
         </div>
-
+        
         <div className="form-section cert-upload">
           <h3>Skills Certification</h3>
           <div className="upload-container">
             {/* Hidden file input */}
-            <input
-              type="file"
-              ref={certFileInputRef}
-              onChange={handleCertFileChange}
+            <input 
+              type="file" 
+              ref={certFileInputRef} 
+              onChange={handleCertFileChange} 
               accept=".jpg,.jpeg,.png,.pdf"
-              style={{ display: "none" }}
+              style={{ display: 'none' }}
             />
-
-            <div className={`upload-box ${certUpload.uploaded ? "uploaded" : ""}`} onClick={handleCertUploadClick}>
+            
+            <div 
+              className={`upload-box ${certUpload.uploaded ? 'uploaded' : ''}`} 
+              onClick={handleCertUploadClick}
+            >
               {certUpload.uploaded ? (
                 <div className="upload-success">
                   <Check size={24} />
@@ -204,20 +209,23 @@ const ArtisanVerification = () => {
             </div>
           </div>
         </div>
-
+        
         <div className="form-actions">
-          <button type="submit" className="submit-button" disabled={!idUpload.uploaded}>
+          <button 
+            type="submit" 
+            className="submit-button"
+            disabled={!idUpload.uploaded}
+          >
             Submit for Verification
           </button>
-          <button type="button" className="cancel-button">
-            Cancel Application
-          </button>
+          <button type="button" className="cancel-button">Cancel Application</button>
         </div>
       </form>
-
-      <PayLogos />
+      
+      <PayLogos/>
+      <Footer/>
     </div>
-  )
+  );
 
   // Verification Process Page
   const VerificationProcess = () => (
@@ -228,18 +236,17 @@ const ArtisanVerification = () => {
         </div>
         <h2>Your verification is under review</h2>
         <p>This will usually be completed within 24-48 hours</p>
-
+        
         <div className="status-actions">
-          <button className="back-button" onClick={navigateToDashboard}>
-            Back to Dashboard
-          </button>
+          <button className="back-button" onClick={navigateToDashboard}>Back to Dashboard</button>
           <button className="help-button">Need Help?</button>
         </div>
       </div>
-
-      <PayLogos />
+      
+      <PayLogos/>
+      <Footer/>
     </div>
-  )
+  );
 
   // Dashboard Page
   const Dashboard = () => (
@@ -250,7 +257,7 @@ const ArtisanVerification = () => {
           <p>Complete your verification to start selling your products and services</p>
         </div>
       )}
-
+      
       {isVerified ? (
         <div className="verified-dashboard">
           <div className="profile-header">
@@ -260,7 +267,7 @@ const ArtisanVerification = () => {
               <p>Verified Craftsperson</p>
             </div>
           </div>
-
+          
           <div className="stats-container">
             <div className="stat-box">
               <h4>TOTAL ORDERS</h4>
@@ -283,13 +290,13 @@ const ArtisanVerification = () => {
               <p>₦125,000</p>
             </div>
           </div>
-
+          
           <div className="products-section">
             <div className="section-header">
               <h3>Products & Services</h3>
               <button className="post-product-btn">Post a Product</button>
             </div>
-
+            
             <div className="products-list">
               <div className="product-item">
                 <h4>Handcrafted Wooden Bowl</h4>
@@ -301,7 +308,7 @@ const ArtisanVerification = () => {
                   </div>
                 </div>
               </div>
-
+              
               <div className="product-item">
                 <h4>Custom Furniture Making</h4>
                 <div className="product-details">
@@ -312,7 +319,7 @@ const ArtisanVerification = () => {
                   </div>
                 </div>
               </div>
-
+              
               <div className="product-item">
                 <h4>Woodworking Workshop</h4>
                 <div className="product-details">
@@ -325,13 +332,13 @@ const ArtisanVerification = () => {
               </div>
             </div>
           </div>
-
+          
           <div className="portfolio-section">
             <div className="section-header">
               <h3>Your Portfolio</h3>
               <button className="view-all-btn">View All</button>
             </div>
-
+            
             <div className="portfolio-grid">
               <div className="portfolio-item"></div>
               <div className="portfolio-item"></div>
@@ -339,13 +346,15 @@ const ArtisanVerification = () => {
               <div className="portfolio-item"></div>
             </div>
           </div>
-
+          
           <div className="reviews-section">
             <div className="section-header">
               <h3>Client Reviews</h3>
             </div>
-
-            <div className="reviews-list">{/* Reviews would go here */}</div>
+            
+            <div className="reviews-list">
+              {/* Reviews would go here */}
+            </div>
           </div>
         </div>
       ) : (
@@ -354,22 +363,22 @@ const ArtisanVerification = () => {
             <div className="placeholder-icon"></div>
             <p>Complete verification to access your dashboard</p>
           </div>
-
+          
           <div className="placeholder-section">
             <div className="placeholder-icon"></div>
             <p>Your products and services will appear here</p>
           </div>
-
+          
           <div className="placeholder-section">
             <div className="placeholder-icon"></div>
             <p>Your portfolio and reviews will be shown here</p>
           </div>
         </div>
       )}
-
-      <PayLogos />
+      
+      <PayLogos/>
     </div>
-  )
+  );
 
   return (
     <div className="artisan-verification-app">
@@ -378,16 +387,18 @@ const ArtisanVerification = () => {
         {currentPage === "verification-process" && <VerificationProcess />}
         {currentPage === "dashboard" && <Dashboard />}
       </div>
-
+      
       {/* Toggle button for demo purposes only - you can remove this in production */}
       <div className="demo-controls">
         <button onClick={() => setCurrentPage("verification-form")}>Form</button>
         <button onClick={() => setCurrentPage("verification-process")}>Process</button>
         <button onClick={() => setCurrentPage("dashboard")}>Dashboard</button>
-        <button onClick={toggleVerificationStatus}>{isVerified ? "Show Unverified" : "Show Verified"}</button>
+        <button onClick={toggleVerificationStatus}>
+          {isVerified ? "Show Unverified" : "Show Verified"}
+        </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ArtisanVerification
+export default ArtisanVerification;

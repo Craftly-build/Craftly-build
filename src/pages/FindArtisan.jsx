@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Star, BookmarkIcon, ChevronLeft, ChevronRight } from "lucide-react"
 import "../styles/FindArtisan.css"
+import Footer from "../components/Footer"
 import "../styles/TrendingProduct.css"
 import i3 from "../assets/a1.png"
 import i4 from "../assets/a2.png"

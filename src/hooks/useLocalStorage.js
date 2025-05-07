@@ -16,26 +16,13 @@ function useLocalStorage(key, initialValue) {
     }
   });
 
-  // Update localStorage when the value changes
+  // Return a wrapped version of useState's setter function that
+  // persists the new value to localStorage.
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.localStorage.setItem(key, JSON.stringify(value));
     }
   }, [key, value]);
-
-  // Listen for changes to this local storage key in other tabs/windows
-  useEffect(() => {
-    function handleStorageChange(e) {
-      if (e.key === key && e.newValue) {
-        setValue(JSON.parse(e.newValue));
-      }
-    }
-
-    if (typeof window !== 'undefined') {
-      window.addEventListener('storage', handleStorageChange);
-      return () => window.removeEventListener('storage', handleStorageChange);
-    }
-  }, [key]);
 
   return [value, setValue];
 }

@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <a href="https://x.com/craftly_ng" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <a href="https://x.com/craftly85225" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
               <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512">
                 <path
                   fill="#807f7e"
