@@ -124,6 +124,13 @@ const Navbar = () => {
           >
             Blog
           </Link>
+          <Link
+            to="/messaging"
+            className={`nav-link ${location.pathname === "/messaging" ? "active" : ""}`}
+            aria-current={location.pathname === "/messaging" ? "page" : undefined}
+          >
+            Mess
+          </Link>
         </div>
 
         <div className="navbar-auth desktop">

@@ -55,6 +55,7 @@ export const AuthProvider = ({ children }) => {
       setCurrentUser({
         email,
         userType,
+        isVerified: userType === "artisan" ? false : true, // Artisans start unverified
         // Add other user details you might get from your API
       })
 
@@ -89,6 +90,7 @@ export const AuthProvider = ({ children }) => {
         name,
         email,
         userType,
+        isVerified: userType === "artisan" ? false : true, // Artisans start unverified
         // Add other user details you might get from your API
       })
 
@@ -129,4 +131,3 @@ export const useAuth = () => {
   }
   return context
 }
-
